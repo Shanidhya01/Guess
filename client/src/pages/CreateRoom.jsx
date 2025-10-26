@@ -186,7 +186,7 @@ const CreateRoom = () => {
 
       try {
         const doFetch = async (tok) =>
-          fetch("https://guessync.onrender.com/api/room/create", {
+          fetch("https://guess-ol8i.vercel.app/api/room/create", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

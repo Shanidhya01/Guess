@@ -16,7 +16,7 @@ const HomePage = () => {
     y: window.innerHeight / 2,
   });
   const [letters, setLetters] = useState(Array(8).fill(""));
-  const targetWord = "GUESSYNC";
+  const targetWord = "BeatGuessr";
   const [movingBlobs, setMovingBlobs] = useState([]);
   const containerRef = useRef(null);
 
