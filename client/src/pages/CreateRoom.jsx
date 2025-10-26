@@ -30,22 +30,22 @@ const CreateRoom = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth >= 1024) {
-      document.body.style.overflow = "hidden"; // lock scroll
-    } else {
-      document.body.style.overflow = "auto";   // allow scroll
-    }
-  };
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        document.body.style.overflow = "hidden"; // lock scroll
+      } else {
+        document.body.style.overflow = "auto";   // allow scroll
+      }
+    };
 
-  handleResize(); // run on mount
-  window.addEventListener("resize", handleResize);
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize, { passive: true });
 
-  return () => {
-    document.body.style.overflow = "auto"; // cleanup
-    window.removeEventListener("resize", handleResize);
-  };
-}, []);
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
 
   useEffect(() => {
@@ -186,7 +186,7 @@ const CreateRoom = () => {
 
       try {
         const doFetch = async (tok) =>
-          fetch("https://guess-ol8i.vercel.app/api/room/create", {
+          fetch("https://guess-vp26.onrender.com/api/room/create", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -604,7 +604,7 @@ const CreateRoom = () => {
         )}
 
         {/* Add CSS animations */}
-        <style jsx>{`
+  <style>{`
           @keyframes fadeIn {
             from {
               opacity: 0;

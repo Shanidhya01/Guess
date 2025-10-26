@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io("https://guess-ol8i.vercel.app/", {
+const socket = io("https://guess-vp26.onrender.com/", {
   autoConnect: false,
   reconnection: true,
   reconnectionAttempts: Infinity,
