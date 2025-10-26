@@ -9,7 +9,6 @@ import GameRoom from "./pages/GameRoom";
 import Profile from "./pages/Profile";
 import HowToPlay from "./pages/HowToPlay";
 import HomePage from './pages/HomePage';
-import AboutDev from './pages/AboutDev';
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function InnerApp() {
       <Route path="/game-room" element={<GameRoom />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/how-to-play" element={<HowToPlay />} />
-      <Route path="/about" element={<AboutDev />} />
     </Routes>
   );
 }
